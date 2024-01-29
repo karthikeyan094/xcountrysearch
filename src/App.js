@@ -24,11 +24,11 @@ function App() {
   return (
     <>
     <div style={{textAlign:"center",background:"#ccc",padding:"15px"}}>
-    <input value={search} onChange={(e)=>setSearch(e.target.value)} style={{width:"600px",padding:"5px",borderRadius:"5px"}} placeholder="Select for countries..."/>
+    <input type="text" value={search} onChange={(e)=>setSearch(e.target.value)} style={{width:"600px",padding:"5px",borderRadius:"5px"}} placeholder="Select for countries..."/>
     </div>
-    <div className="wrapper">
+    <div className="wrapper ">
       {filteredCountries.map((country) => (
-        <div key={country.cca3} className="card">
+        <div key={country.cca3} className="card countryCard">
           <img className="img" src={country.flags.png} alt={`Flag of ${country.name.common}`} />
           <h2>{country.name.common}</h2>
         </div>
